@@ -1,23 +1,50 @@
-const oficial = 954.10;
-const turista = 1526.56;
-const blue = 1405.00;
+let pacientes = [];
+let contador = 1;
+let addPacienteButton = document.getElementById("boton-agregar");
+let pacientesList = document.getElementById("lista-pacientes")
 
-function convertir() {
-    let total;
-    if (cambio === "oficial") 
-        total = monto * oficial;
-    else if (cambio === "turista")
-        total = monto * turista;
-    else
-        total = monto * blue;
-    return total;
+
+let addPaciente = () => {
+    let nom = prompt("Ingrese el nombre del paciente");
+    let age = Number(prompt("Ingrese la edad de " + nom));
+    let paciente = {
+        id : contador,
+        nombre : nom,
+        edad : age,
+    }
+    pacientes.push(paciente);
+
+    contador++;
+
+    mostrarPacientes();
 }
 
-let cambio = prompt("¿Qué tipo de cambio desea realizar? oficial - blue - turista")
-while ((cambio !== "oficial") && (cambio !== "turista") && (cambio !== "blue")) {
-    cambio = prompt("Opción incorrecta, posibles cambios: oficial - blue - turista");
+
+addPacienteButton.addEventListener("click",addPaciente);
+
+
+const deletePaciente = (elemento) => {
+    pacientes = pacientes.filter((paciente) => paciente.id != elemento.id);
+    mostrarPacientes();
 }
 
-let monto = prompt("Ingrese el monto a cambiar");
-let cantidadPesos = convertir();
-alert("Monto total: $" + cantidadPesos + " pesos argentinos");
+const mostrarPacientes = () => {
+    pacientesList.innerHTML = "";
+
+    pacientes.forEach((elemento => {
+        let item = document.createElement("li");
+        item.className = "card";
+        
+        item.innerHTML = `<span> Nombre: ${elemento.nombre}, edad: ${elemento.edad}</span> 
+        <button class="delete-button">Dar de alta</button>`;
+
+        let deleteButton = item.querySelector(".delete-button");
+        
+        deleteButton.addEventListener("click", () => {
+            deletePaciente(elemento);
+        });
+
+        pacientesList.appendChild(item);
+    }))   
+}
+mostrarPacientes();
