@@ -1,6 +1,7 @@
 let pacientes = [];
 let contador = 1;
 let addPacienteButton = document.getElementById("boton-agregar");
+let buscarPacienteButton = document.getElementById("boton-buscar");
 let pacientesList = document.getElementById("lista-pacientes")
 
 
@@ -19,8 +20,18 @@ let addPaciente = () => {
     mostrarPacientes();
 }
 
+let buscarPaciente = () => {
+    let nom = prompt("Ingrese el nombre del paciente");
+    let encontrado = pacientes.find((paciente) => paciente.nombre === nom);
+    if (encontrado != null)
+        console.log(encontrado);
+    else
+        alert(`El paciente ${nom} no se encuentra en el sistema`);
+}
+
 
 addPacienteButton.addEventListener("click",addPaciente);
+buscarPacienteButton.addEventListener("click",buscarPaciente);
 
 
 const deletePaciente = (elemento) => {
