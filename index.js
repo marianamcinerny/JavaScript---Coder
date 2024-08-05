@@ -36,6 +36,9 @@ let inputPlayer2 = document.getElementById("player2");
 let namePlayer1 = "";
 let namePlayer2 = "";
 
+let message = document.getElementById("message");
+message.innerText = " ";
+
 inputPlayer1.addEventListener("input", () => {
     namePlayer1 = inputPlayer1.value;
 })
@@ -63,7 +66,7 @@ formPlayers.addEventListener("submit", (e) => {
         localStorage.setItem("players" , JSON.stringify(players));
     }
     else {
-        alert("completar bien los datos de los jugadores");
+        message.innerText = "Completar bien los datos de los jugadores";
     }
 });
 
@@ -73,9 +76,9 @@ startButton.addEventListener("click", () => {
         window.location.href = "game.html";
     }
     else if ((namePlayer1 || namePlayer2) == ""){
-        alert("completar bien los datos de los jugadores");
+        message.innerText = "Completar bien los datos de los jugadores"; 
     }
     else {
-        alert("no se selecciono una tematica");
+        message.innerText = "No se selecciono una temática"
     }
 })

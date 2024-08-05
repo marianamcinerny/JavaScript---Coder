@@ -3,6 +3,9 @@ let players = JSON.parse(localStorage.getItem("players"));
 
 let cells = document.querySelectorAll(".cell");
 let currentPlayerSpan = document.getElementById("current-player");
+let message = document.getElementById("message");
+message.innerText = " ";
+
 
 const getPlayersName = (id) => {
     return id === 1 ? players[0].name : players[1].name;
@@ -16,14 +19,13 @@ let currentPlayer = localStorage.getItem("currentPlayer") || "X"
 let board = JSON.parse(localStorage.getItem("board")) || 
 [null, null, null, null, null, null, null, null, null];
 
-
 const renderBoard = () => {
     cells.forEach((cell,i) => {
         cell.innerHTML = board[i] ? `<p>${board[i]}</p>` : '';
     })
 };
-
 renderBoard();
+
 
 
 currentPlayerSpan.innerText = currentPlayer === "X" ? p1 : p2;
@@ -37,10 +39,10 @@ cells.forEach(cell => {
             if (checkWinner()) {
                 let winner = currentPlayer === "X" ? 1 : 2
                 increasePoint(winner);
-                alert(`gana ${players[winner-1].name}`)
+                message.innerText = `Ganó ${players[winner-1].name}`
                 resetBoard();
             }else if (board.every(cell => cell != null)) {
-                alert('empate');
+                message.innerText = `Empate`
                 resetBoard();
             } else {
                 currentPlayer = currentPlayer === "X" ? "O" : "X";
@@ -77,7 +79,7 @@ const increasePoint = (id) => {
     standings.innerHTML= `<h3>Puntajes:</h3>
     <p>${p1} : ${players[0].points}</p>
     <p>${p2} : ${players[1].points}</p>`
-
+    localStorage.setItem("score" , JSON.stringify(standings.innerHTML));
 }
 
 const resetBoard = () => {

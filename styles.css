@@ -12,6 +12,7 @@
 
 html, body {
     height: 100%;
+    width: 100%;
 }
 
 body {
@@ -108,6 +109,19 @@ h2 {
     cursor: pointer;
 }
 
+.middle-game {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.middle-game div {
+    margin: 10px 30px 10px 30px;
+}
+
+
 footer {
     margin-top: 60px;
 }
@@ -122,4 +136,10 @@ button {
     border-radius: 5px;
     border-style: none;
     cursor: pointer;
+}
+
+
+/*message*/
+#message {
+    margin-top: 20px;
 }
