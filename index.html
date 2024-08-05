@@ -3,24 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe - Juego En Linea</title>
     <link rel="stylesheet" href="./styles.css">
-    <title>Veterinaria - La Plata</title>
 </head>
 <body>
-    <h1 class="title">Pacientes</h1>
-    <div class="container">
-        <div class="b-agregar">
-            <button id="boton-agregar">Agregar paciente</button>
+    <header>
+        <h1>TIC TAC TOE</h1>
+    </header>
+    <main>
+        <h2>Elija una temática:</h2>
+        <div class="theme">
+            <div>
+                <button id="black-btn"></button>
+                <button id="pink-btn"></button>
+                <button id="blue-btn"></button>
+                <button id="green-btn"></button>
+            </div>
         </div>
-        <div class="b-buscar">
-            <button id="boton-buscar">Buscar paciente</button>
+        <div>
+            <form class="form-players">
+                <div>
+                    <label for="player1">Nombre del Jugador 1:</label>
+                    <input type="text" id="player1" >
+                </div>
+                <div>
+                    <label for="player2">Nombre del Jugador 2:</label>
+                    <input type="text" id="player2" >
+                </div>
+                <button id="submit-btn">Guardar</button>
+            </form>
         </div>
-        
-    </div>
-    <div class="list">
-        <ul id = "lista-pacientes"></ul> 
-    </div>
-    
-    <script src="./main.js"></script>
+        <div>
+            <button id="start-btn">Iniciar el juego</button>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Mariana Lujan Mc Inerny</p>
+    </footer>
+    <script src="./index.js"></script>
 </body>
 </html>

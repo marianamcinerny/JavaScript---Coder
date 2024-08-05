@@ -1,53 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Quicksand:wght@300..700&display=swap');
 
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: "Bakbak One", sans-serif;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
     font-style: normal;
-    font-weight: lighter;
-}
-.title{
-    color: blue;
     text-align: center;
-    margin-top: 20px;
 }
 
-.container {
-    padding: 20px;
+html, body {
+    height: 100%;
+}
+
+body {
     display: flex;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
-.b-agregar {
-    width: 50%;
+h1 {
+    margin: 30px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.theme{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.theme div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.theme div button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-style: none;
+    cursor: pointer;
+}
+
+
+
+#black-btn {
+    background-color: black;
+}
+
+#pink-btn {
+    background-color: rgb(247, 96, 184);
+}
+
+#blue-btn {
+    background-color: rgb(2, 23, 207);
+}
+
+#green-btn {
+    background-color: green;
+}
+
+.form-players {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.form-players div {
+    padding: 5px;
+}
+
+
+
+
+/*GAME PAGE CSS*/
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px 0;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
     display: flex;
     justify-content: center;
-    border-width: 2px 0 0 0;
-    border-color: black;
-    border-style: solid;
-    padding-top: 20px;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
 }
 
-.b-buscar {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    border-width: 2px 0 0 2px;
-    border-color: black;
-    border-style: solid;
-    padding-top: 20px;
+footer {
+    margin-top: 60px;
 }
 
-button{
-    border: none;
-    background-color: blue;
+
+
+/*Buttons*/
+button {
+    padding: 5px 10px;
+    background-color: #96dbf4;
+    text-align: center;
     border-radius: 5px;
-    padding: 0 5px 0 5px;
-    color: white;
-}
-
-.list {
-    margin: 10px, 0, 0, 20px;
+    border-style: none;
+    cursor: pointer;
 }
