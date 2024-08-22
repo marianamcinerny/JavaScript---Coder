@@ -3,24 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe - Juego En Linea</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Ta Te Ti - Juego En Linea</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
     <header>
-        <h1>TIC TAC TOE</h1>
+        <h1>TA TE TI</h1>
     </header>
     <main>
-        <h2>Elija una temática:</h2>
-        <div class="theme">
-            <div>
-                <button id="black-btn"></button>
+        <div id="avatars-container" class="avatars-container"></div>
+        <div>
+            <h2>Elija una temática:</h2>
+            <div class="theme">
+                <button id="grey-btn"></button>
                 <button id="pink-btn"></button>
                 <button id="blue-btn"></button>
-                <button id="green-btn"></button>
+                <button id="green-btn"></button>    
             </div>
         </div>
+
         <div>
+            <h2>Complete los datos de los jugadores:</h2>
             <form class="form-players">
                 <div>
                     <label for="player1">Nombre del Jugador 1:</label>
@@ -33,14 +36,17 @@
                 <button id="submit-btn">Guardar</button>
             </form>
         </div>
+
+
         <div>
             <button id="start-btn">Iniciar el juego</button>
         </div>
-        <div id="message"></div>
+        <h3 id="message"></h3>
     </main>
     <footer>
         <p>© 2024 Mariana Lujan Mc Inerny</p>
     </footer>
-    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./main.js"></script>
 </body>
 </html>

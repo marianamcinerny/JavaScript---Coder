@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tic Tac Toe - Juego</title>
-    <link rel="stylesheet" href="./styles.css">
+    <title>Ta Te Ti - Juego</title>
+    <link rel="stylesheet" href="./game.css">
 </head>
 <body>
     <header>
-        <h1>TIC TAC TOE</h1>
+        <h1>TA TE TI</h1>
         <h2 id="turn">Turno de <span id="current-player"></span></h2>
         <h3 id="message"></h3>
     </header>
     <main>
-        <div class="middle-game">
+        <div class="right">
+            <div class="theme">
+                <button id="grey-btn"></button>
+                <button id="pink-btn"></button>
+                <button id="blue-btn"></button>
+                <button id="green-btn"></button>
+            </div>
+        </div>
+        <div class="middle">
             <div id="gameBoard" class="board">
                 <div class="cell" data-index="0"></div>
                 <div class="cell" data-index="1"></div>
@@ -25,17 +33,20 @@
                 <div class="cell" data-index="7"></div>
                 <div class="cell" data-index="8"></div>
             </div>
-            <div id="standings">
+            <div>
+                <button id="reset-btn">Reiniciar partida</button>
+                <button id="index-btn">Volver al inicio</button>
             </div>
         </div>
-        <div>
-            <button id="reset-btn">Reiniciar partida</button>
-            <button id="index-btn">Volver al inicio</button>
+        <div class="left">
+            <div id="standings"></div>
+            <div id="history"></div>
         </div>
     </main>
     <footer>
         <p>© 2024 Mariana Lujan Mc Inerny</p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./game.js"></script>
 </body>
 </html>

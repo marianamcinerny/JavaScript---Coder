@@ -15,89 +15,67 @@ html, body {
     width: 100%;
 }
 
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 h1 {
-    margin: 30px;
+    margin: 30px 0 20px 0;
 }
 
 h2 {
-    margin-bottom: 20px;
+    margin: 30px 0 20px 0;
 }
 
-.theme{
+
+main {
+    width: 100%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/*RIGHT*/
+.theme {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
 }
-
-.theme div {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
-    width: 100%;
-}
-
-.theme div button{
+.theme button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border-style: none;
     cursor: pointer;
+    margin: 20px 0 20px 0;
 }
 
-
-
-#black-btn {
-    background-color: black;
+#grey-btn {
+    background-color: rgb(226, 226, 226);
 }
-
 #pink-btn {
-    background-color: rgb(247, 96, 184);
+    background-color: rgb(250, 210, 215);
 }
-
 #blue-btn {
-    background-color: rgb(2, 23, 207);
+    background-color: rgb(204, 219, 253);
 }
-
 #green-btn {
-    background-color: green;
+    background-color: rgb(173, 247, 182);
 }
 
-.form-players {
+
+/*MIDDLE*/
+.middle {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
 }
-
-.form-players div {
-    padding: 5px;
-}
-
-
-
-
-/*GAME PAGE CSS*/
 .board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
     grid-template-rows: repeat(3, 100px);
     gap: 5px;
-    margin: 20px 0;
+    margin: 20px 0 10px 0;
 }
-
 .cell {
     width: 100px;
     height: 100px;
@@ -108,29 +86,9 @@ h2 {
     font-size: 2em;
     cursor: pointer;
 }
-
-.middle-game {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    margin-bottom: 20px;
-}
-
-.middle-game div {
-    margin: 10px 30px 10px 30px;
-}
-
-
-footer {
-    margin-top: 60px;
-}
-
-
-
-/*Buttons*/
-button {
+.middle button {
     padding: 5px 10px;
+    margin: 5px 5px 0 5px;
     background-color: #96dbf4;
     text-align: center;
     border-radius: 5px;
@@ -138,8 +96,24 @@ button {
     cursor: pointer;
 }
 
+/*LEFT*/
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-/*message*/
+.left div {
+    margin: 20px;
+}
+
+
+
 #message {
     margin-top: 20px;
+}
+
+footer {
+    margin-top: 60px;
 }

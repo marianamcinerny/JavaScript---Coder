@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&family=Quicksand:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: center;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 30px 0 10px 0;
+}
+
+h2 {
+    margin: 30px 0 20px 0;
+}
+
+
+.theme {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.theme button{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    margin: 0 20px 0 20px;
+}
+
+#grey-btn {
+    background-color: rgb(226, 226, 226) ;
+}
+#pink-btn {
+    background-color: rgb(250, 210, 215);
+}
+#blue-btn {
+    background-color: rgb(204, 219, 253);
+}
+#green-btn {
+    background-color: rgb(173, 247, 182);
+}
+
+.selected {
+    border: 2px solid rgb(0, 0, 0);
+}
+
+
+.form-players {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.form-players div {
+    padding-bottom: 10px;
+}
+
+
+button {
+    padding: 5px 10px;
+    background-color: #96dbf4;
+    text-align: center;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.avatars-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.avatars-container div {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.avatars-container div svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+footer {
+    margin-top: 60px;
+}
